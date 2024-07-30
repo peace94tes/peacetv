@@ -16,7 +16,7 @@ async function initializePlayer(id, url, drmKey, enableCustomConfig) {
     controls.addEventListener('error', onUIErrorEvent);
    if (enableCustomConfig) {
         player.configure('manifest.dash.ignoreMinBufferTime', true);
-        player.configure('manifest.hls.liveSegmentsDelay', 1);
+        player.configure('manifest.hls.liveSegmentsDelay', 3);
         player.configure('streaming.rebufferingGoal', 3 /* second */);
    }
     try {
