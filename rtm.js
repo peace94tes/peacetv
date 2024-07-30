@@ -41,9 +41,9 @@ function onUIErrorEvent(errorEvent) {
 document.addEventListener('shaka-ui-loaded', function() {
 
 //RTM MALAY*/
-initializePlayer('sukan', 'https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd');
+initializePlayer('sukan', 'https://cors-proxy.cooks.fyi/https://d25tgymtnqzu8s.cloudfront.net/smil:sukan/manifest.mpd');
 
-initializePlayer('okey', 'https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd');
+initializePlayer('okey', 'https://cors-proxy.cooks.fyi/https://d25tgymtnqzu8s.cloudfront.net/smil:okey/manifest.mpd');
 
 initializePlayer('ch1', 'https://d30aylox5wvifh.cloudfront.net/event/smil:ag1/manifest.mpd');
 
