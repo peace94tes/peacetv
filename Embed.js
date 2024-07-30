@@ -50,4 +50,8 @@ initializePlayer('court2', 'https://lebo.huminbird.cn/live/ballbar_27100.m3u8');
 
 initializePlayer('court3', 'https://lebo.huminbird.cn/live/ballbar_21990.m3u8');
 
+initializePlayer('barca', 'https://lebo.huminbird.cn/live/ballbar_12130.m3u8');
+
+initializePlayer('barca2', 'https://py2.dlive.click/85Y86KxskXbRlszwGEfUlw/1722409145/326130343a346534313a663a663a3a346436303a35336330/ff501/playlist.m3u8?b=1');
+
 });
