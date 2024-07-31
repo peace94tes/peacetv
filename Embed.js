@@ -50,7 +50,7 @@ initializePlayer('court2', 'https://lebo.huminbird.cn/live/ballbar_15890.m3u8');
 
 initializePlayer('court3', 'https://lebo.huminbird.cn/live/ballbar_37290.m3u8');
 
-initializePlayer('ch1', 'https://lebo.huminbird.cn/live/ballbar_12130.m3u8');
+initializePlayer('ch1', 'https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd', {'610ad79e26a84fc782c987455e21a86b':'d2d4acc6e79447b55f3f5c0267af06f5'});
 
 initializePlayer('ch2', 'https://py2.dlive.click/85Y86KxskXbRlszwGEfUlw/1722409145/326130343a346534313a663a663a3a346436303a35336330/ff501/playlist.m3u8?b=1');
 
