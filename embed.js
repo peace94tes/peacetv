@@ -54,4 +54,6 @@ initializePlayer('ch1', 'https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/G
 
 initializePlayer('ch2', 'https://py2.dlive.click/85Y86KxskXbRlszwGEfUlw/1722409145/326130343a346534313a663a663a3a346436303a35336330/ff501/playlist.m3u8?b=1');
 
+initializePlayer('ch3', 'https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd', {'610ad79e26a84fc782c987455e21a86b':'d2d4acc6e79447b55f3f5c0267af06f5'});
+  
 });
