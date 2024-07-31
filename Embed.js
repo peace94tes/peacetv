@@ -44,11 +44,11 @@ document.addEventListener('shaka-ui-loaded', function() {
 //Embed CH Sport*/
 initializePlayer('asp1', 'https://webtvstream.bhtelecom.ba/hls6/as_premium1.mpd', {'c18b6aa739be4c0b774605fcfb5d6b68':'e41c3a6f7532b2e3a828d9580124c89d'});
 
-initializePlayer('court1', 'https://lebo.huminbird.cn/live/ballbar_27540.m3u8');
+initializePlayer('court1', 'https://lebo.huminbird.cn/live/ballbar_20910.m3u8');
 
-initializePlayer('court2', 'https://lebo.huminbird.cn/live/ballbar_27100.m3u8');
+initializePlayer('court2', 'https://lebo.huminbird.cn/live/ballbar_15890.m3u8');
 
-initializePlayer('court3', 'https://lebo.huminbird.cn/live/ballbar_21990.m3u8');
+initializePlayer('court3', 'https://lebo.huminbird.cn/live/ballbar_37290.m3u8');
 
 initializePlayer('ch1', 'https://lebo.huminbird.cn/live/ballbar_12130.m3u8');
 
