@@ -42,11 +42,11 @@ function onUIErrorEvent(errorEvent) {
 document.addEventListener('shaka-ui-loaded', function() {
 
 //Embed CH Sport*/
-initializePlayer('c1', 'https://lebo.huminbird.cn/live/ballbar_39470.m3u8');
+initializePlayer('c1', 'https://lebo.huminbird.cn/live/ballbar_38400.m3u8');
 
-initializePlayer('c2', 'https://lebo.huminbird.cn/live/ballbar_38540.m3u8');
+initializePlayer('c2', 'https://lebo.huminbird.cn/live/ballbar_33240.m3u8');
 
-initializePlayer('c3', 'https://lebo.huminbird.cn/live/ballbar_31370.m3u8');
+initializePlayer('c3', 'https://lebo.huminbird.cn/live/ballbar_40560.m3u8');
 
 initializePlayer('ch1', 'https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd', {'610ad79e26a84fc782c987455e21a86b':'d2d4acc6e79447b55f3f5c0267af06f5'});
 
