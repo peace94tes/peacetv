@@ -52,6 +52,8 @@ initializePlayer('ch1', 'https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/G
 
 initializePlayer('ch2', 'https://py2.dlive.click/85Y86KxskXbRlszwGEfUlw/1722409145/326130343a346534313a663a663a3a346436303a35336330/ff501/playlist.m3u8?b=1');
 
-initializePlayer('ch3', 'https://cdnlb.tvplayhome.lt/live/eds/TV3_Sport_HD_HVC/GO3_LIVE_DASH_AVC/TV3_Sport_HD_HVC.mpd', {'610ad79e26a84fc782c987455e21a86b':'d2d4acc6e79447b55f3f5c0267af06f5'});
-  
+initializePlayer('spotv1', 'https://proji.glitch.me/https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTVHD/mpd/SPOTVHD.mpd', {'e60ece8f0d9042fcb52508055ec48e5e':'213f438bd4961cda987d41b7f154f1e5'});
+
+initializePlayer('spotv2', 'https://proji.glitch.me/https://atemecdnbalancer-voe.sysln.id/live/eds/SPOTV2HD/mpd/SPOTV2HD.mpd', {'e6ed3fdf6e9f491d9ead109fc0b00cfc':'3bc6c45722eb5fa7b343de9bffc4f7c7'});
+
 });
