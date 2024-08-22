@@ -1,7 +1,6 @@
-
 //SPORTS
 
-let soccerch = 'https://local.starlive.workers.dev/https://melon-live-cdn.mncnow.id/live/eds/soccerchannel-test/sa_dash_vmx/soccerchannel-test.mpd';
+let soccerc = 'https://local.starlive.workers.dev/https://melon-live-cdn.mncnow.id/live/eds/soccerchannel-test/sa_dash_vmx/soccerchannel-test.mpd';
 let ss3sd = 'https://d1abp075u76pbq.cloudfront.net/live/eds/MNCSports3-HD/sa_dash_vmx/MNCSports3-HD.mpd';
 let ss3 = 'https://local.starlive.workers.dev/https://melon-live-cdn.mncnow.id/live/eds/MNCSports3-HD/sa_dash_vmx/MNCSports3-HD.mpd';
 let ss4 = 'https://local.starlive.workers.dev/https://melon-live-cdn.mncnow.id/live/eds/Sportstar4/sa_dash_vmx/Sportstar4.mpd';
@@ -77,12 +76,10 @@ async function init1() {
   const video = document.getElementById('ss1');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: 'rgba(255,255,255,.4)',
-      buffered: '#FF4500',
-      played: '#00BFFF',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -113,12 +110,10 @@ async function init2() {
   const video = document.getElementById('ss2');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -149,12 +144,10 @@ async function init3() {
   const video = document.getElementById('ss3');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -184,12 +177,10 @@ async function init4() {
   const video = document.getElementById('ss4');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -218,15 +209,13 @@ async function init4() {
 
 
 async function init5() {
-  const video = document.getElementById('soccerch');
+  const video = document.getElementById('soccerc');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -245,7 +234,7 @@ async function init5() {
   player.addEventListener('error', onPlayerErrorEvent);
   controls.addEventListener('error', onUIErrorEvent);
   try {
-    await player.load(soccerch);
+    await player.load(soccerc);
     console.log('The video has now been loaded!');
   } catch (error) {
     onPlayerError(error);
@@ -256,12 +245,10 @@ async function init6() {
   const video = document.getElementById('spotv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -291,12 +278,10 @@ async function init7() {
   const video = document.getElementById('spotv2');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -326,12 +311,10 @@ async function init8() {
   const video = document.getElementById('fight');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -366,12 +349,10 @@ async function init9() {
   const video = document.getElementById('rcti');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -401,12 +382,10 @@ async function init10() {
   const video = document.getElementById('mnctv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -437,12 +416,10 @@ async function init11() {
   const video = document.getElementById('gtv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -472,12 +449,10 @@ async function init12() {
   const video = document.getElementById('inews');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -507,12 +482,10 @@ async function init13() {
   const video = document.getElementById('trans7');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -542,12 +515,10 @@ async function init14() {
   const video = document.getElementById('transtv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -577,12 +548,10 @@ async function init15() {
   const video = document.getElementById('antv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -613,12 +582,10 @@ async function init16() {
   const video = document.getElementById('tvone');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -650,12 +617,10 @@ async function init17() {
   const video = document.getElementById('metrotv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -686,12 +651,10 @@ async function init18() {
   const video = document.getElementById('tvri');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -722,12 +685,10 @@ async function init19() {
   const video = document.getElementById('kompas');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -758,12 +719,10 @@ async function init20() {
   const video = document.getElementById('rtv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -793,12 +752,10 @@ async function init21() {
   const video = document.getElementById('net');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -830,12 +787,10 @@ async function init22() {
   const video = document.getElementById('tvn_movies');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -865,12 +820,10 @@ async function init23() {
   const video = document.getElementById('fmn');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -902,12 +855,10 @@ async function init24() {
   const video = document.getElementById('hits_movies');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -938,12 +889,10 @@ async function init25() {
   const video = document.getElementById('imc');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -974,12 +923,10 @@ async function init26() {
   const video = document.getElementById('galaxy');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1011,12 +958,10 @@ async function init27() {
   const video = document.getElementById('galaxy_premium');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1048,12 +993,10 @@ async function init28() {
   const video = document.getElementById('thrill');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1085,12 +1028,10 @@ async function init29() {
   const video = document.getElementById('cinemaworld');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1122,12 +1063,10 @@ async function init30() {
   const video = document.getElementById('celestial_movies');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1157,12 +1096,10 @@ async function init31() {
   const video = document.getElementById('celestial_clasic_movies');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1193,12 +1130,10 @@ async function init32() {
   const video = document.getElementById('zee_bioskop');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1229,12 +1164,10 @@ async function init33() {
   const video = document.getElementById('axn');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1265,12 +1198,10 @@ async function init34() {
   const video = document.getElementById('cinemachi');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1300,12 +1231,10 @@ async function init35() {
   const video = document.getElementById('cinemachi_action');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1335,12 +1264,10 @@ async function init36() {
   const video = document.getElementById('cinemachi_kids');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1371,12 +1298,10 @@ async function init37() {
   const video = document.getElementById('cinemachi_max');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1406,12 +1331,10 @@ async function init38() {
   const video = document.getElementById('cinemachi_xtra');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1441,12 +1364,10 @@ async function init39() {
   const video = document.getElementById('my_cinema');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1476,12 +1397,10 @@ async function init40() {
   const video = document.getElementById('my_cinema_asia');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1511,12 +1430,10 @@ async function init41() {
   const video = document.getElementById('my_family');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1557,12 +1474,10 @@ async function init42() {
   const video = document.getElementById('tvn');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1594,12 +1509,10 @@ async function init43() {
   const video = document.getElementById('hits');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1630,12 +1543,10 @@ async function init44() {
   const video = document.getElementById('musictv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1669,12 +1580,10 @@ async function init45() {
   const video = document.getElementById('babytv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1704,12 +1613,10 @@ async function init46() {
   const video = document.getElementById('kidstv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1740,12 +1647,10 @@ async function init47() {
   const video = document.getElementById('nickeloden');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1776,12 +1681,10 @@ async function init48() {
   const video = document.getElementById('animax');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1811,12 +1714,10 @@ async function init49() {
   const video = document.getElementById('cebebies');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1848,12 +1749,10 @@ async function init50() {
   const video = document.getElementById('my_kids');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1883,12 +1782,10 @@ async function init51() {
   const video = document.getElementById('nick_jr');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1919,12 +1816,10 @@ async function init52() {
   const video = document.getElementById('oktv');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
@@ -1954,12 +1849,10 @@ async function init53() {
   const video = document.getElementById('ss3sd');
   const ui = video['ui'];
   const config = {
-    'seekBarColors': {
-      base: '#2081d8',
-      buffered: '#fff',
-      played: '#ff003c',
-    }
-  };
+        'controlPanelElements': ['play_pause','time_and_duration','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
   ui.configure(config);
   const controls = ui.getControls();
   const player = controls.getPlayer();
