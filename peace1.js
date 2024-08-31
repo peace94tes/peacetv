@@ -1,13 +1,13 @@
-async function initializePlayer(id, url, drmKey, enableCustomConfig) {
+  async function initializePlayer(id, url, drmKey, enableCustomConfig) {
     const video = document.getElementById(id);
     const ui = video['ui'];
     const controls = ui.getControls();
     const player = controls.getPlayer();    
     const config = {
-        'controlPanelElements': ['play_pause','playback_rate','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
+        'controlPanelElements': ['play_pause','time_and_duration','spacer','mute','volume','captions','language' ,'quality','fullscreen'],
         'playbackRates': [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
-        'seekBarColors': {base: 'rgb(32,178,170)', buffered: 'rgba(255,255,255,.4)', played: 'rgb(255,0,0)'} 
-         'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
+        'seekBarColors': {base: 'rgba(32,178,169,255)', buffered: 'rgba(255,255,255,.9)', played: 'rgb(255,0,0)'},
+        'volumeBarColors': {base: 'rgba(255, 255, 255, .4)', level: 'rgba(255,255,255,.9)'}};
     ui.configure(config);
     player.configure({drm: {clearKeys: drmKey}});
     window.player = player;
