@@ -1,0 +1,11 @@
+
+  div.play-wrapper {
+    background-color: #000 !important;
+    /*background-image: url("https://cdn.jsdelivr.net/gh/peace94tes/LogoSports@refs/heads/main/PeaceTV_Logo_Player.jpg") !important;*/
+    background-image: ur("https://cdn.jsdelivr.net/gh/peace94tes/LogoSports@refs/heads/main/20250121_011123.png") !important;
+    background-size: cover !important;
+    position: fixed !important; top:0!important;bottom:0!important;left:0!important;right:0!important;
+    background-position: 50% 50%!important;
+    height:100%!important;
+    opacity: 100!important; 
+  }
